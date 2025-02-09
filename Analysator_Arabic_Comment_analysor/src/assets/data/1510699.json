@@ -1,0 +1,71 @@
+{
+  "scraped_data": [
+    {
+      "post_id": 1510699,
+      "post_link": "https://www.hespress.com/%d8%b4%d8%b1%d9%83%d8%a9-%d9%85%d8%b1%d8%b3%d9%8a%d8%af%d9%8a%d8%b3-%d8%a7%d9%84%d8%b5%d9%8a%d9%86%d9%8a%d8%a9-%d8%aa%d8%b9%d9%84%d9%86-%d8%b1%d8%b5%d8%af-17-%d8%a3%d9%84%d9%81-%d8%b3%d9%8a%d8%a7-1510699.html",
+      "category": "منوعات",
+      "title": "شركة مرسيديس الصينية تعلن رصد 17 ألف سيارة معيبة",
+      "post_date": "08-02-2025 12:34",
+      "comments": [
+        {
+          "comment_id": "1510699_19304293",
+          "post_id": 1510699,
+          "comment": "عادي كل هذا العدد تقدر تشتغل عليه الصين في مدة وجيزه لكثرة بواخرها التجاريه وعدد العمال في قطاع السياره والروبوت ووووو……",
+          "comment_reaction": 2,
+          "comment_timestamp": "2025-02-08T13:07:00Z",
+          "sentiment": {
+            "label": "neutral",
+            "score": 0,
+            "probabilities": {
+              "negative": 0.1842,
+              "neutral": 0.6347,
+              "positive": 0.1811
+            }
+          }
+        },
+        {
+          "comment_id": "1510699_19304370",
+          "post_id": 1510699,
+          "comment": "انا اعرف ان شركة مرسيديس صناعة ألمانية وليس صينية\nغريب\nهل التركيب يغير الملكية",
+          "comment_reaction": 2,
+          "comment_timestamp": "2025-02-08T15:06:00Z",
+          "sentiment": {
+            "label": "neutral",
+            "score": -0.19,
+            "probabilities": {
+              "negative": 0.1918,
+              "neutral": 0.8081,
+              "positive": 0.0001
+            }
+          }
+        },
+        {
+          "comment_id": "1510699_19304391",
+          "post_id": 1510699,
+          "comment": "سلام . راه سيارات المرسيدس الالمانيه حتى هي رجعة كتستعمل موتور رونو الفرنسي والنجمة علامة سيارات المرسيدس كتبق هي هي",
+          "comment_reaction": 2,
+          "comment_timestamp": "2025-02-08T15:24:00Z",
+          "sentiment": {
+            "label": "neutral",
+            "score": -0.32,
+            "probabilities": {
+              "negative": 0.3442,
+              "neutral": 0.6297,
+              "positive": 0.0261
+            }
+          }
+        }
+      ],
+      "sentiment_statistics": {
+        "total_comments": 3,
+        "positive_comments": 0,
+        "negative_comments": 0,
+        "neutral_comments": 3,
+        "positive_percentage": 0,
+        "negative_percentage": 0,
+        "neutral_percentage": 1
+      }
+    }
+  ],
+  "scraped_at": "2025-02-08T23:00:22.843453Z"
+}

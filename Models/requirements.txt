@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+requests
+beautifulsoup4
+numpy
+pandas
+tensorflow
+keras
+pymongo
+pyngrok
+python-dotenv

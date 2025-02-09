@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: ./Analysator_Arabic_Comment_analysor/Dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    environment:
+      - NODE_ENV=development
+    command: npm run dev
+
+  backend:
+    build:
+      context: .
+      dockerfile: ./Models/Dockerfile2 # Dockerfile for your Python script
+    volumes:
+      - .:/app
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - capabilities: [gpu]  # Enables GPU for TensorFlow
+    command: ["bash", "-c", "python /app/onelink_server.py"]

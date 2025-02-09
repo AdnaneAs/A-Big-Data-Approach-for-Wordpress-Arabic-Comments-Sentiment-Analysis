@@ -1,0 +1,39 @@
+{
+  "scraped_data": [
+    {
+      "post_id": 1510837,
+      "post_link": "https://www.hespress.com/%d8%b1%d8%a6%d8%a7%d8%b3%d8%a9-%d9%84%d8%a8%d9%86%d8%a7%d9%86-%d8%aa%d8%b9%d9%84%d9%86-%d8%aa%d8%b4%d9%83%d9%8a%d9%84-%d8%a7%d9%84%d8%ad%d9%83%d9%88%d9%85%d8%a9-1510837.html",
+      "category": "خارج الحدود",
+      "title": "رئاسة لبنان تعلن تشكيل الحكومة",
+      "post_date": "08-02-2025 15:05",
+      "comments": [
+        {
+          "comment_id": "1510837_19304387",
+          "post_id": 1510837,
+          "comment": "اليوم لبنان في حالة مريحة لكي تبني جولة سيادية يحكمها من يختاره الشعب اللبناني لان اولا حزب الله انتهت مهمته ويبقى اثره محدود جدا لا يؤثر في الدولة اللبنانية المقبلة وثانيا الدولة السورية الحالية اعتقد ان رئيسها سيتعامل مع حكام لبنان بالاحترام والتعاون البناء ولا يتدخل في شؤونها الداخلية لان لبنان في الماضي كانت تعيش تحت رحمة حزب الله وحافظ الاسد ثم ابنه بشار الاسد وان شاء الله الحاكم الجديد في سوريا يحترم سيادة لبنان ولا يتدخل في شؤونها الداخلية",
+          "comment_reaction": 1,
+          "comment_timestamp": "2025-02-08T15:22:00Z",
+          "sentiment": {
+            "label": "neutral",
+            "score": 0.11,
+            "probabilities": {
+              "negative": 0.1642,
+              "neutral": 0.5619,
+              "positive": 0.2739
+            }
+          }
+        }
+      ],
+      "sentiment_statistics": {
+        "total_comments": 1,
+        "positive_comments": 0,
+        "negative_comments": 0,
+        "neutral_comments": 1,
+        "positive_percentage": 0,
+        "negative_percentage": 0,
+        "neutral_percentage": 1
+      }
+    }
+  ],
+  "scraped_at": "2025-02-08T14:54:46.194967Z"
+}

@@ -1,0 +1,92 @@
+version: "3.8"
+services:
+  bigdata_project:
+    build: .
+    image: bigdata_project:latest
+    container_name: bigdata_project_backend
+    hostname: bigdata-node
+    restart: always
+    ports:
+      - "22:22"        # SSH
+      - "9000:9000"    # HDFS
+      - "8088:8088"    # YARN Resource Manager
+      - "9870:9870"    # HDFS Web UI
+      - "9092:9092"    # Kafka
+      - "2181:2181"    # ZooKeeper
+      - "8888:8888"    # Jupyter
+      - "9200:9200"    # Elasticsearch HTTP
+      - "9300:9300"    # Elasticsearch Transport
+      - "27017:27017"  # MongoDB
+      - "7077:7077"    # Spark Master
+      - "8080:8080"    # Spark Web UI
+      - "8081:8081"    # Spark Worker UI
+      - "4040:4040"    # Spark Application UI
+      - "9100:9100"    # Cerebro
+      - "8082:8081"    # Mongo Express
+    environment:
+      # Spark settings
+      - SPARK_MASTER=spark://bigdata-node:7077
+      - SPARK_WORKER_CORES=2
+      - SPARK_WORKER_MEMORY=2g
+      - SPARK_LOCAL_IP=bigdata-node
+      
+      # MongoDB settings
+      - MONGO_INITDB_ROOT_USERNAME=admin
+      - MONGO_INITDB_ROOT_PASSWORD=password
+      - ME_CONFIG_MONGODB_ADMINUSERNAME=admin
+      - ME_CONFIG_MONGODB_ADMINPASSWORD=password
+      - ME_CONFIG_MONGODB_URL=mongodb://admin:password@localhost:27017/
+      
+      # Schema Registry settings
+      - SCHEMA_REGISTRY_HOST_NAME=bigdata-node
+      - SCHEMA_REGISTRY_KAFKASTORE_BOOTSTRAP_SERVERS=PLAINTEXT://bigdata-node:9092
+      
+      # Elasticsearch settings
+      - ES_JAVA_OPTS=-Xms2g -Xmx2g
+      - discovery.type=single-node
+      - xpack.security.enabled=false
+    volumes:
+      - ./src:/bigdata_project_src
+      - ./data:/bigdata_project_data
+      - hadoop_namenode:/hadoop/hadoop-3.3.0/dfs/name
+      - hadoop_datanode:/hadoop/hadoop-3.3.0/dfs/data
+      - hadoop_historyserver:/hadoop/hadoop-3.3.0/yarn/timeline
+      - elasticsearch_data:/usr/local/elasticsearch/data
+      - mongodb_data:/data/db
+      - spark_logs:/spark/spark-3.5.4-bin-hadoop3/logs
+      - kafka_data:/usr/local/kafka/data
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+      nofile:
+        soft: 65536
+        hard: 65536
+    networks:
+      - bigdata_project_network
+    healthcheck:
+      test: |
+        bash -c '
+        jps | grep NameNode &&
+        curl -s http://localhost:8080 &&
+        curl -s http://localhost:9200/_cluster/health &&
+        nc -z localhost 27017 &&
+        nc -z localhost 9092 &&
+        nc -z localhost 2181'
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    command: ["/start-services.sh"]
+
+networks:
+  bigdata_project_network:
+    driver: bridge
+
+volumes:
+  hadoop_namenode:
+  hadoop_datanode:
+  hadoop_historyserver:
+  elasticsearch_data:
+  mongodb_data:
+  spark_logs:
+  kafka_data:

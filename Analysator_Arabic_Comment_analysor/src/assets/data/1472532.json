@@ -1,0 +1,39 @@
+{
+  "scraped_data": [
+    {
+      "post_id": 1472532,
+      "post_link": "https://www.hespress.com/example",
+      "category": "سياسة",
+      "title": "Test Article",
+      "post_date": "29-11-2024 00:00",
+      "comments": [
+        {
+          "comment_id": "1472532_19207745",
+          "post_id": 1472532,
+          "comment": "Test comment 1",
+          "comment_reaction": 0,
+          "comment_timestamp": "2024-11-29T02:38:00Z",
+          "sentiment": {
+            "label": "Negative",
+            "score": -0.5,
+            "probabilities": {
+              "negative": 0.4988,
+              "neutral": 0.4987,
+              "positive": 0.0025
+            }
+          }
+        }
+      ],
+      "sentiment_statistics": {
+        "total_comments": 1,
+        "positive_comments": 0,
+        "negative_comments": 1,
+        "neutral_comments": 0,
+        "positive_percentage": 0,
+        "negative_percentage": 1,
+        "neutral_percentage": 0
+      }
+    }
+  ],
+  "scraped_at": "2024-12-05T15:53:51.301120Z"
+}
